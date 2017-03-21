@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UDA_Project0</string>
+    <string name="myNanodegreeApps">My Nanodegree Apps</string>
+    <string name="project1">热门电影</string>
+    <string name="project2">股票雄鹰</string>
+    <string name="project3">XYZ 阅读器</string>
+    <string name="project4">最新闻</string>
+    <string name="project5">毕业设计</string>
+</resources>

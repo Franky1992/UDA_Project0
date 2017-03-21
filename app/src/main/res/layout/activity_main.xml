@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/myNanodegreeApps"
+        android:textSize="24sp" />
+
+    <Button
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="openPrj1"
+        android:text="@string/project1" />
+
+    <Button
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="openPrj2"
+        android:text="@string/project2" />
+
+    <Button
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="openPrj3"
+        android:text="@string/project3" />
+
+    <Button
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="openPrj4"
+        android:text="@string/project4" />
+
+    <Button
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="openPrj5"
+        android:text="@string/project5" />
+
+
+</LinearLayout>
