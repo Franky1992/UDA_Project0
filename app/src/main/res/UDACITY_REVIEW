@@ -1,0 +1,70 @@
+UDACITY 项目审阅
+
+https://review.udacity.com/?utm_medium=email&utm_campaign=reviewsapp-submission-reviewed&utm_source=blueshift&utm_content=reviewsapp-submission-reviewed&bsft_eid=6f154690-7543-4582-9be7-e397af208dbd&bsft_clkid=070b3903-c323-408c-b39a-4e90a7edbc8d&bsft_uid=3ff07c12-e51a-4485-b496-e36a0b756c1d&bsft_mid=dfca2599-696d-4831-9ddc-c049dc4bb36e&bsft_txnid=7116d8b4-e1f2-4d02-a9fc-53d6e57dcc82#!/reviews/414679
+
+
+
+> GENERAL
+    你的项目完成的非常好！满足本次评审的所有条件，但是仍然有一些细节你需要注意！因为我们是使用中文的，
+    因此对编码问题尤其要重视，如果你的项目的编码不是UTF-8的话，那么中文有可能在其他设备上出现乱码！
+    这是用户难以忍受的。另外你也应该考虑，“我是否一直在写重复的代码？”，当一段代码你写了超过3遍后，
+    你就应该意识到，哦！这段代码我经常用到！，你应该将其抽取出来进行一些简单的封装，以便后期复用！
+    这个项目比较简单，因此我也没有太多的建议给你，希望本次评审能让你有所启发！期待你下次提交的项目！
+
+> app/src/main/res/layout/activity_main.xml
+    · Button width 属性单位建议修改为dp，有助于屏幕适配。
+    · 多个样式相同的 Button 可以自定义一个样式清单放在 values/styles.xml 中。style教程：http://www.tutorialspoint.com/android/android_styles_and_themes.htm
+
+> app/src/main/java/com/example/franky/uda_project0/MainActivity.java
+    · 每个 Button 都具有点击事件，这些事件可以合并：
+        public void btnClick(View v){
+            switch (v.getId()){
+                case R.id.button1:
+
+                    break;
+                case R.id.button2:
+
+                    break;
+                case R.id.button3:
+
+                    break;
+                case R.id.button4:
+
+                    break;
+                case R.id.button5:
+
+                    break;
+                }
+            }
+
+        然后再绑定点击事件：
+        在activity_main.xml中为Button绑定点击事件，并为Button赋予名称
+        <Button
+                ...
+                android:id="@+id/button1"
+                android:onClick="btnClick" />
+
+    · 不建议每次都创建一个Toast
+      当用户点击多个按钮触发事件时, Toast会按点击顺序，一条接一条展示信息，而不是立刻响应操作(展示最新的消息),
+      这将导致Toast展示的信息一直'滞留在界面'上，即使你已经退出了App或者跳转到其他界面，这会让用户难以忍受。
+      Android 文档: Toast  http://developer.android.youdaxue.com/reference/android/widget/Toast.html
+
+      建议
+
+      private static Toast mToast=null;
+
+      private void show(int resId){
+          if(mToast==null){
+              mToast=Toast.makeText(this,resId,Toast.LENGTH_SHORT);
+          }else{
+              mToast.setText(resId);
+          }
+          mToast.show();
+        }
+
+      在需要的地方调用
+
+      //注意: 你的字符串需要保存在strings.xml中
+      show(R.string.your_msg);
+
+      ​
