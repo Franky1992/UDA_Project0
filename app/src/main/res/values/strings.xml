@@ -6,4 +6,9 @@
     <string name="project3">XYZ 阅读器</string>
     <string name="project4">最新闻</string>
     <string name="project5">毕业设计</string>
+    <string name="openingPrj1">Opening project 热门电影 &#8230;</string>
+    <string name="openingPrj2">Opening project 股票雄鹰 &#8230;</string>
+    <string name="openingPrj3">Opening project XYZ 阅读器 &#8230;</string>
+    <string name="openingPrj4">Opening project 最新闻 &#8230;</string>
+    <string name="openingPrj5">Opening project 毕业设计 &#8230;</string>
 </resources>
